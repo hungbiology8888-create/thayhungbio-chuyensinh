@@ -464,7 +464,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
 </section>
 
 <section id="xem-thu">
-  <div class="sec-head rv sm"><p class="eyebrow">Phòng xem thử</p><h2>Lật từng trang đề</h2><p>Trang đầu của đề rõ nét, các trang còn lại và toàn bộ trang HDC được làm mờ, có chữ bản quyền.</p></div>
+  <div class="sec-head rv sm"><p class="eyebrow">Phòng xem thử</p><h2>Lật từng trang đề</h2><p>Xem trước từng trang đề và toàn bộ trang HDC chi tiết, có chữ bản quyền.</p></div>
   <div class="viewer rv">
     <div class="vtabs" role="tablist" aria-label="Chọn đề xem thử" id="vtabs"></div>
     <div class="vbody">
@@ -522,7 +522,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
   <div class="kd-ctl"><button id="kdpv" aria-label="Trang trước">‹</button><span id="kdc">1 / 1</span><button id="kdnx" aria-label="Trang sau">›</button></div></div>
   <aside class="kd-side"><h3 id="kdt"></h3><p class="sub" id="kds"></p>
     <div class="hd"><span>✔</span><span><b>Có hướng dẫn chấm chi tiết</b> cho đề này. Quý thầy cô liên hệ thầy để nhận bản đầy đủ.</span></div>
-    <p class="kd-lb">Trang đề</p><div class="kd-th2" id="kdth"></div><p class="kd-lb hdl">Hướng dẫn chấm · <span id="kdhn"></span> trang (làm mờ)</p><div class="kd-th2" id="kdth3"></div>
+    <p class="kd-lb">Trang đề</p><div class="kd-th2" id="kdth"></div><p class="kd-lb hdl">HDC chi tiết · <span id="kdhn"></span> trang</p><div class="kd-th2" id="kdth3"></div>
     <a class="btn main" href="#lien-he" id="kdgo">Hỏi đề này, nhắn thầy →</a>
   </aside></div></div>
 
@@ -736,7 +736,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
   $('#kdq').oninput=function(){q=nz(this.value.trim());draw()};
   var ci=0,pi=0,m=$('#kdm'),pb=$('#kdp');
   function all(d){return d.p.concat(d.h)}
-  function show(){var d=KD[ci],a=all(d),f=a[pi],isH=pi>=d.p.length;$('#kdi').src='img/so/'+f;pb.classList.toggle('lk',pi>0);var tg=$('#kdtag');tg.textContent=isH?'HƯỚNG DẪN CHẤM':'ĐỀ THI';tg.className='kd-tag'+(isH?' h':'');$('#kdc').textContent=(isH?'HDC '+(pi-d.p.length+1)+' / '+d.h.length:'Đề '+(pi+1)+' / '+d.p.length);
+  function show(){var d=KD[ci],a=all(d),f=a[pi],isH=pi>=d.p.length;$('#kdi').src='img/so/'+f;pb.classList.toggle('lk',pi>0);var tg=$('#kdtag');tg.textContent=isH?'HDC CHI TIẾT':'ĐỀ THI';tg.className='kd-tag'+(isH?' h':'');$('#kdc').textContent=(isH?'HDC '+(pi-d.p.length+1)+' / '+d.h.length:'Đề '+(pi+1)+' / '+d.p.length);
     [].forEach.call($('#kdth').children,function(b,i){b.classList.toggle('on',i===pi)});[].forEach.call($('#kdth3').children,function(b,i){b.classList.toggle('on',i+d.p.length===pi)})}
   function open(i){ci=i;pi=0;var d=KD[i];$('#kdt').textContent=d.n;$('#kds').textContent=(/^\d/.test(d.s)?'Năm học ':'')+d.s+' · '+RG[d.r];
     function fill(el,arr,off,lb){el.innerHTML='';arr.forEach(function(f,j){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label',lb+' '+(j+1));var im=new Image();im.loading='lazy';im.src='img/so/'+f;im.draggable=false;b.appendChild(im);b.onclick=function(){pi=off+j;show()};el.appendChild(b)})}fill($('#kdth'),d.p,0,'Trang đề');fill($('#kdth3'),d.h,d.p.length,'Trang HDC');$('#kdhn').textContent=d.h.length;
