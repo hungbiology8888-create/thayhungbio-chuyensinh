@@ -562,6 +562,10 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
         <div class="gimgs"><img src="img/ga_hdc.jpg" alt="Hướng dẫn chấm đề thi thử số 21 (làm mờ)" draggable="false"><img src="img/ga_de.jpg" alt="Trang đầu đề thi thử số 21" draggable="false"></div>
         <div><span class="src">Đề thi thử mới · Cập nhật hằng tuần</span><h3>Đề thi thử số 21</h3><p class="meta">7 câu · 150 phút</p><ul><li>Đề mới, bám cấu trúc đề chuyên</li><li>Kèm hướng dẫn chấm chi tiết</li><li>File Word: tải về, chỉnh sửa, dùng ngay</li></ul></div>
       </article>
+      <article class="gcard">
+        <div class="gimgs"><img src="img/ga22_hdc.jpg" alt="Hướng dẫn chấm đề thi thử số 22 (làm mờ)" draggable="false"><img src="img/ga22_de.jpg" alt="Trang đầu đề thi thử số 22" draggable="false"></div>
+        <div><span class="src">Đề thi thử mới · Cập nhật 20/11/2026</span><h3>Đề thi thử số 22</h3><p class="meta">8 câu · 150 phút</p><ul><li>Đề mới, bám cấu trúc đề chuyên</li><li>Kèm hướng dẫn chấm chi tiết</li><li>File Word: tải về, chỉnh sửa, dùng ngay</li></ul></div>
+      </article>
     </div>
     <div class="soon">
       <div><b>Cập nhật hằng tuần</b><span>Đề thi thử hay, điển hình, mới hoàn toàn</span></div>
@@ -791,7 +795,8 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
 
   /* ===== Nhật ký cập nhật: thêm dòng mới vào ĐẦU mảng CL mỗi tuần ===== */
   var CL=[
-    {d:'18/11/2026',n:1,t:'+4 đề tuyển sinh chuyên Sinh 2026 – 2027',s:'Đồng Tháp, THPT Chuyên Phan Bội Châu (Nghệ An), Đà Nẵng, Đắk Lắk – đều có HDC chi tiết. Kho tặng kèm có thêm Đề thi thử số 21.'},
+    {d:'20/11/2026',n:1,t:'Đề thi thử số 22 kèm HDC chi tiết',s:'Có đề 8 câu, 150 phút, kèm hướng dẫn chấm chi tiết và file Word. Xem trang đầu trong mục Quà tặng kèm.'},
+    {d:'18/11/2026',t:'+4 đề tuyển sinh chuyên Sinh 2026 – 2027',s:'Đồng Tháp, THPT Chuyên Phan Bội Châu (Nghệ An), Đà Nẵng, Đắk Lắk – đều có HDC chi tiết. Kho tặng kèm có thêm Đề thi thử số 21.'},
     {d:'17/11/2026',t:'Thư viện đạt 45 đề các Sở và trường chuyên 2025 – 2026',s:'Bổ sung đề Vĩnh Phúc và Olympic chuyên Thái Nguyên, kèm HDC chi tiết.'}
   ];
   (function(){var el=document.getElementById('cl');if(!el)return;el.innerHTML=CL.map(function(x){return '<div class="row"><div class="dt">'+x.d+'</div><div class="bx"><b>'+x.t+(x.n?'<i class="nw">MỚI</i>':'')+'</b><span>'+x.s+'</span></div></div>'}).join('')+'<p class="wk">🔄 Đề thi thử hay và đề tuyển sinh 2026 – 2027 được cập nhật hằng tuần.</p>'})();
