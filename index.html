@@ -506,7 +506,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
         <h3 id="vtitle"></h3>
         <p class="desc" id="vdesc"></p>
         <div class="thumbs" id="thumbs"></div>
-        <p class="tips">Bấm vào trang rõ để phóng to. Trang đang mờ có biểu tượng khóa và chỉ đọc được trong bản đầy đủ.</p>
+        <p class="tips">Bấm vào trang để phóng to. Nội dung xem thử có chữ bản quyền, bản đầy đủ gửi khi nhận chuyển giao.</p>
       </aside>
     </div>
     <p class="legal">Nội dung xem thử thuộc bản quyền của Thầy Hùng Bio. Nghiêm cấm sao chép, chụp màn hình hoặc đăng tải lại.</p>
@@ -685,7 +685,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
   function fillWM(el){var h='',row='';for(var i=0;i<8;i++)row+='<span>THẦY HÙNG BIO</span>';for(var r=0;r<14;r++)h+='<div style="margin-left:-'+((r*97)%300)+'px">'+row+'</div>';el.innerHTML=h}
   fillWM($('#wm'));fillWM($('#lwm'));
   /* data */
-  var VIS={d1:[1,2,4],d2:[1,4,5],d3:[1,3,5],d4:[1,3,4],d6:[1,4,5]};
+  var VIS={d1:[1,2,3,4,5],d2:[1,2,3,4,5],d3:[1,2,3,4,5],d4:[1,2,3,4,5],d6:[1,2,3,4,5]};
   function dp(k){var a=[];for(var p=1;p<=5;p++){var o=VIS[k].indexOf(p)>-1;a.push([k+'_'+p+(o?'':'b'),o?0:1])}return a}
   var S=[
    {t:'Đề 1',title:'Đề số 1',d:'Nhiều hình thí nghiệm, đồ thị nhiệt độ nóng chảy DNA, đồ thị hàm lượng DNA nhân, điện di allele.',p:dp('d1')},
@@ -693,7 +693,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
    {t:'Đề 3',title:'Đề số 3',d:'Đồ thị đường cong, biểu đồ cột, bảng phép lai, phả hệ.',p:dp('d3')},
    {t:'Đề 4',title:'Đề số 4',d:'Sơ đồ, bảng số liệu, ảnh điện di, biểu đồ cột.',p:dp('d4')},
    {t:'Đề 6',title:'Đề số 6',d:'Đồ thị, bảng phép lai, sơ đồ thí nghiệm và phả hệ.',p:dp('d6')},
-   {t:'Hướng dẫn chấm',hdc:1,title:'Hướng dẫn chấm (trích)',d:'Trang đầu của một hướng dẫn chấm và vài trang rời nhau để bạn xem cách trình bày đáp án và thang điểm.',p:[['h1',0],['h2b_b',1],['h3b',0],['h4b_b',1]]}
+   {t:'Hướng dẫn chấm',hdc:1,title:'Hướng dẫn chấm (trích)',d:'Trang đầu và một trang giữa của hướng dẫn chấm để bạn xem cách trình bày đáp án và thang điểm.',p:[['h1',0],['h3b',0]]}
   ];
   var cur=0,idx=0;
   var tabs=$('#vtabs');
