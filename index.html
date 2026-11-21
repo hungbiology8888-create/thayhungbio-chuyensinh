@@ -395,6 +395,15 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
 .tos .rule p{margin:0;color:var(--ink)}
 .kd-src{font-size:13px;opacity:.75;margin-top:10px}
 
+
+.tot{display:grid;grid-template-columns:1.25fr repeat(3,1fr);gap:14px;margin-bottom:34px;align-items:stretch}
+.tot>div{border-radius:20px;padding:22px 18px;text-align:center;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.tot b{display:block;font-family:var(--font-head);font-size:40px;line-height:1;color:var(--hema);font-variant-numeric:tabular-nums;margin-bottom:6px}
+.tot span{font-size:14px;color:var(--ink-2)}
+.tot .big{background:linear-gradient(135deg,#12143a,#3a1d7a 55%,#c42d68);border:0;color:#fff;box-shadow:0 24px 44px -24px rgba(60,30,140,.7)}
+.tot .big b{font-size:68px;color:#fff}.tot .big span{color:#ffe3ee;font-weight:700;font-size:15px}.tot .big small{display:block;margin-top:6px;font-size:12.5px;opacity:.8}
+.tot-n{margin:-14px 0 30px;color:var(--ink-2);font-size:14px}
+@media(max-width:800px){.tot{grid-template-columns:repeat(3,1fr)}.tot .big{grid-column:1/-1}}
 .cl{max-width:900px}
 .cl .row{display:grid;grid-template-columns:132px 1fr;gap:18px;position:relative;padding-bottom:22px}
 .cl .row::before{content:"";position:absolute;left:150px;top:26px;bottom:0;width:2px;background:var(--line)}
@@ -616,6 +625,13 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
 
 <section id="moi-cap-nhat">
   <div class="sec-head rv"><p class="eyebrow">Mới cập nhật</p><h2>Đề mới <span class="grad">mỗi tuần</span></h2><p>Thư viện và kho đề thi thử được bổ sung đều đặn. Quý thầy cô nhận chuyển giao luôn có nguồn đề mới.</p></div>
+  <div class="tot">
+    <div class="big rv"><b data-n="71">0</b><span>đề đã cập nhật đến nay</span><small>Tính đến 21/11/2026, tiếp tục thêm mỗi tuần</small></div>
+    <div class="rv d1"><b data-n="49">0</b><span>đề các Sở GD&amp;ĐT và trường chuyên</span></div>
+    <div class="rv d2"><b data-n="20">0</b><span>đề chuyên Sinh biên soạn mới 2026 – 2027</span></div>
+    <div class="rv d3"><b data-n="2">0</b><span>đề thi thử tặng kèm (số 21, 22)</span></div>
+  </div>
+  <p class="tot-n">49 + 20 + 2 = 71 đề, đều kèm hướng dẫn chấm chi tiết.</p>
   <div class="cl rv" id="cl"></div>
 </section>
 
@@ -799,7 +815,7 @@ footer{border-top:1px solid var(--line);padding:26px 0 44px;margin-top:84px;colo
 
   /* ===== Nhật ký cập nhật: thêm dòng mới vào ĐẦU mảng CL mỗi tuần ===== */
   var CL=[
-    {d:'20/11/2026',n:1,t:'Đề thi thử số 22 kèm HDC chi tiết',s:'Có đề 8 câu, 150 phút, kèm hướng dẫn chấm chi tiết và file Word. Xem trang đầu trong mục Quà tặng kèm.'},
+    {d:'20/11/2026',n:1,t:'Đề thi thử số 22 kèm HDC chi tiết',s:'Có đề 8 câu, 150 phút, kèm hướng dẫn chấm chi tiết và file Word. Xem thử 3 trang đầu trong mục Quà tặng kèm.'},
     {d:'18/11/2026',t:'+4 đề tuyển sinh chuyên Sinh 2026 – 2027',s:'Đồng Tháp, THPT Chuyên Phan Bội Châu (Nghệ An), Đà Nẵng, Đắk Lắk – đều có HDC chi tiết. Kho tặng kèm có thêm Đề thi thử số 21, xem thử được trong mục Quà tặng.'},
     {d:'17/11/2026',t:'Thư viện đạt 45 đề các Sở và trường chuyên 2025 – 2026',s:'Bổ sung đề Vĩnh Phúc và Olympic chuyên Thái Nguyên, kèm HDC chi tiết.'}
   ];
